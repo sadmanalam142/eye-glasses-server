@@ -5,6 +5,7 @@ export type IUser = {
   role: string
   email: string
   password: string
+  passwordChangedAt?: Date
 }
 
 export type UserModel = Model<IUser>

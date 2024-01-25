@@ -14,6 +14,12 @@ app.use(cookieParser())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+// app.use( "/", (req: Request, res: Response) => {
+//   res.send({
+//     message: "up and running"
+//   })
+// })
+
 app.use('/api/v1/', routes)
 
 app.use(globalErrorHandler)

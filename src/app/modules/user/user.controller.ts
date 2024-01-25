@@ -6,8 +6,8 @@ import httpStatus from 'http-status'
 import { IUser } from './user.interface'
 
 const createUser = catchAsync(async (req: Request, res: Response) => {
-  const { student } = req.body
-  const result = await UserService.createUser(student)
+  const { password, ...user } = req.body
+  const result = await UserService.createUser(password, user)
 
   sendResponse<IUser>(res, {
     statusCode: httpStatus.OK,
