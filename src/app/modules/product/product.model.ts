@@ -8,6 +8,10 @@ const productSchema = new Schema<IProduct, ProductModel>(
       type: String,
       required: true,
     },
+    image: {
+      type: String,
+      required: true,
+    },
     price: {
       type: String,
       required: true,
@@ -42,6 +46,7 @@ const productSchema = new Schema<IProduct, ProductModel>(
     },
     email: {
       type: String,
+      required: true,
     },
   },
   {
